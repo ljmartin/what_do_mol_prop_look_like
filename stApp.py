@@ -52,14 +52,14 @@ def main():
     ###now the app:
     
     #property sliders:    
-    mw_min = st.slider('MW_min', 
+    mw_min = st.slider('Molecular weight (MW) min:', 
                        min_value = mwmin,
                        max_value = mwmax,
                        #value = float(np.percentile(df['mw'], 5)),
                        value = (mwmax-mwmin)*0.05 + mwmin,
                        step=0.05
                        )
-    mw_max = st.slider('MW_max', 
+    mw_max = st.slider('Molecular weight (MW) max:', 
                        min_value = mwmin,
                        max_value = mwmax,
                        value = (mwmax-mwmin)*0.95 + mwmin,
