@@ -6,6 +6,8 @@ view the app:
 ### what
 this a streamlit app centred around 500,000 molecules from the ZINC database. You can drag the sliders to filter the molecules by their physical chemistry properties (so far, only molecular weight and calculated logP). You then press a button to select a small random sample and visualize them for inspection.
 
+![scrnshot](./scrnshot.png)
+
 
 ### why
 [ultra-large molecular docking](https://doi.org/10.1038/s41586-019-0917-9) is in vogue now. A typical virtual library can easily reach hundreds of millions of molecules, requiring high-performance computing clusters. One way to cut down on computation time is to pre-filter the library by properties you think are desirable. The [ZINC tranche browser](http://zinc15.docking.org/tranches/home/) is one way to do this. But how do you decide where to set the cut-off? The five rules from [Lipinsk, Lombardo, Dominy, and Feeney](https://doi.org/10.1016/S0169-409X(96)00423-1) were the original way, but more and more people are seeing the [rules broken](https://doi.org/10.1021/acs.jmedchem.8b00686).
