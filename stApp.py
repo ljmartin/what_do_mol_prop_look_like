@@ -29,7 +29,7 @@ def main():
 
     #print out some explanation stuff in the sidebar:
     st.sidebar.title("WDMPLL?")
-    st.sidebar.write("If you want to see your favourite molecular property, drop a line at [@lewischewis](https://twitter.com/lewischewis) or ljmartin at hey dot com")
+    st.sidebar.write("If you want to see your favourite molecular property included, drop a line at [@lewischewis](https://twitter.com/lewischewis) or ljmartin at hey dot com, or open a github issue")
     st.sidebar.write("""If you ask 'but why?' or 'but how?', see the readme at the [github page](https://github.com/ljmartin/what_do_mol_prop_look_like)""")
     st.sidebar.write('Click the ✖️ to close this bar and widen the view')
 
@@ -42,7 +42,7 @@ def main():
     st.write('There are sliders below that set the minimum or maximum Molecular Weight (MW) or calculated logP (cLogP). First, set a desired range. Then, click the "**Show Sample**" button. A small sample of 24 molecules satisfying the filters will be chosen and visualized. Just click it again to get a new batch.')
 
     st.write("""### Histograms """)
-    st.write("If you set an unrealistic range, there won't be any molecules left. There are 500k molecules, but the distribution isn't uniform. Here's a guide to help:")
+    st.write("If you set an unrealistic range, there won't be any molecules left. There are 500k molecules in the set, but the distribution isn't uniform. Here's a guide to help:")
     st.image('density.svg')
     
 
