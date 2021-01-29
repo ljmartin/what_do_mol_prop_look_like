@@ -39,10 +39,10 @@ def main():
     st.write("""The [Lipinski Ro5](https://en.wikipedia.org/wiki/Lipinski%27s_rule_of_five) helps people focus their drug discovery efforts on the molecules most likely to make good therapeutic drugs.""")
     st.write("""But, [increasingly](https://doi.org/10.1021/acs.jmedchem.8b00686), drug-like molecules break the Ro5, so it's helpful to push the boundaries of molecular properties when considering a molecule library. One way to get a feel for how far they can be pushed is to just stare at molecules in a certain property-space and decide if they look reasonable or not.""")
     st.write("""### Instructions""")
-    st.write('There are sliders below that set the minimum or maximum Molecular Weight (MW) or calculated logP (cLogP). First, set a desired range. Then, click the "**Show Sample**" button. A small sample of 24 molecules satisfying the filters will be chosen and visualized. Just click it more to get a new batch.')
+    st.write('There are sliders below that set the minimum or maximum Molecular Weight (MW) or calculated logP (cLogP). First, set a desired range. Then, click the "**Show Sample**" button. A small sample of 24 molecules satisfying the filters will be chosen and visualized. Just click it again to get a new batch.')
 
     st.write("""### Histograms """)
-    st.write("If you go set an unrealistic range, there won't be any molecules left. Here's a guide to help:")
+    st.write("If you set an unrealistic range, there won't be any molecules left. There are 500k molecules, but the distribution isn't uniform. Here's a guide to help:")
     st.image('density.svg')
     
 
