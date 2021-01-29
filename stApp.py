@@ -28,20 +28,27 @@ def main():
 
 
     #print out some explanation stuff in the sidebar:
-    st.sidebar.title("Start here:")
+    st.sidebar.title("WDMPLL?")
+    st.sidebar.write("If you want to see your favourite molecular property, drop a line at [@lewischewis](https://twitter.com/lewischewis) or ljmartin at hey dot com")
+    st.sidebar.write("""If you ask 'but why?' or 'but how?', see the readme at the [github page](https://github.com/ljmartin/what_do_mol_prop_look_like)""")
+    st.sidebar.write('Click the ✖️ to close this bar and widen the view')
 
 
     #and some intro text in the main frame:
-    st.title('Welcome')
-    st.write('Instructions on how to use :)')
+    st.title('What do molecular properties look like?')
+    st.write("""The [Lipinski Ro5](https://en.wikipedia.org/wiki/Lipinski%27s_rule_of_five) helps people focus their drug discovery efforts on the molecules most likely to make good therapeutic drugs.""")
+    st.write("""But, [increasingly](https://doi.org/10.1021/acs.jmedchem.8b00686), drug-like molecules break the Ro5, so it's helpful to push the boundaries of molecular properties when considering a molecule library. One way to get a feel for how far they can be pushed is to just stare at molecules in a certain property-space and decide if they look reasonable or not.""")
+    st.write("""### Instructions""")
+    st.write('There are sliders below that set the minimum or maximum Molecular Weight (MW) or calculated logP (cLogP). First, set a desired range. Then, click the "**Show Sample**" button. A small sample of 24 molecules satisfying the filters will be chosen and visualized. Just click it more to get a new batch.')
 
-
+    st.write("""### Histograms """)
+    st.write("If you go set an unrealistic range, there won't be any molecules left. Here's a guide to help:")
     st.image('density.svg')
     
 
     
 
-
+    st.write("""### Filters:""")
     ###now the app:
     
     #property sliders:    
@@ -74,7 +81,9 @@ def main():
     
     mask = (df['mw'] <= mw_max) & (df['mw'] >= mw_min) \
             & (df['clogp'] <= clogp_max) & (df['clogp'] >= clogp_min)
-    st.write('Number of molecules: ', mask.sum())
+
+    st.write("""### Molecules:""")
+    st.write('Number of molecules left: ', mask.sum())
 
 
     #this is the main event. Based on the filters/sliders above:
