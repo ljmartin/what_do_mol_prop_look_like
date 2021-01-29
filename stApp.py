@@ -8,6 +8,11 @@ from rdkit.Chem import Draw
 def load_df():
     return pd.read_csv('mydf.csv')
 
+st.set_page_config(
+    layout='wide',
+    )
+
+
 def main():
     #first things first, load the dataframe of molecules and their properties:
     #df = pd.read_csv('sample.smifi')
@@ -85,7 +90,7 @@ def main():
             mols = [Chem.MolFromSmiles(i) for i in sample['smiles']]
             
             ##3:
-            st.image(Draw.MolsToGridImage(mols, molsPerRow=5))
+            st.image(Draw.MolsToGridImage(mols, molsPerRow=6))
         
 
 if __name__=="__main__":

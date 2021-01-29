@@ -1,1 +1,4 @@
-.smi
+*.smi
+*~
+*#
+*eckpoint*
