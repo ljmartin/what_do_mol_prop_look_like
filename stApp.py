@@ -1,12 +1,16 @@
 import streamlit as st
+
 import pandas as pd
 import numpy as np
+import altair as alt
+
 from rdkit import Chem
 from rdkit.Chem import Draw
 
 @st.cache
 def load_df():
     return pd.read_csv('mydf.csv')
+
 
 st.set_page_config(
     layout='wide',
@@ -17,6 +21,12 @@ def main():
     #first things first, load the dataframe of molecules and their properties:
     #df = pd.read_csv('sample.smifi')
     df = load_df()
+    #handy values
+    mwmin = float(df['mw'].min()-1)
+    mwmax = float(df['mw'].max()+1)
+    clogpmin = float(df['clogp'].min()-1)
+    clogpmax = float(df['clogp'].max()-1)
+
 
     #print out some explanation stuff in the sidebar:
     st.sidebar.title("Start here:")
@@ -27,12 +37,13 @@ def main():
     st.write('Instructions on how to use :)')
 
 
+    st.image('density.svg')
+    
+
+    
+
+
     ###now the app:
-    #handy refs
-    mwmin = float(df['mw'].min()-1)
-    mwmax = float(df['mw'].max()+1)
-    clogpmin = float(df['clogp'].min()-1)
-    clogpmax = float(df['clogp'].max()-1)
     
     #property sliders:    
     mw_min = st.slider('MW_min', 
@@ -71,7 +82,7 @@ def main():
     #1. select a random sample of N ligands that meet the selected filter.
     #2. turn them into molecules,
     #3. and draw!
-    N = 20
+    N = 24
     if st.button('Show sample'):
 
         ##1:
@@ -90,7 +101,7 @@ def main():
             mols = [Chem.MolFromSmiles(i) for i in sample['smiles']]
             
             ##3:
-            st.image(Draw.MolsToGridImage(mols, molsPerRow=6))
+            st.image(Draw.MolsToGridImage(mols, molsPerRow=6, legends=list(sample['zinc_id'])))
         
 
 if __name__=="__main__":
