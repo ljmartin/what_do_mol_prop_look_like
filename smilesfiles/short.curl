@@ -1,0 +1,10 @@
+curl --remote-time --fail --create-dirs -o AA/AAAA.smi http://files.docking.org/2D/AA/AAAA.smi
+curl --remote-time --fail --create-dirs -o AA/AAAB.smi http://files.docking.org/2D/AA/AAAB.smi
+curl --remote-time --fail --create-dirs -o AA/AABA.smi http://files.docking.org/2D/AA/AABA.smi
+curl --remote-time --fail --create-dirs -o AA/AABB.smi http://files.docking.org/2D/AA/AABB.smi
+curl --remote-time --fail --create-dirs -o AA/AACA.smi http://files.docking.org/2D/AA/AACA.smi
+curl --remote-time --fail --create-dirs -o AA/AACB.smi http://files.docking.org/2D/AA/AACB.smi
+curl --remote-time --fail --create-dirs -o AA/AAEA.smi http://files.docking.org/2D/AA/AAEA.smi
+curl --remote-time --fail --create-dirs -o AA/AAEB.smi http://files.docking.org/2D/AA/AAEB.smi
+curl --remote-time --fail --create-dirs -o AB/ABAA.smi http://files.docking.org/2D/AB/ABAA.smi
+curl --remote-time --fail --create-dirs -o AB/ABAB.smi http://files.docking.org/2D/AB/ABAB.smi
