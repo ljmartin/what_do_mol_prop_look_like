@@ -104,7 +104,7 @@ def main():
 
         ##good to go.
         else:
-            sample = df[mask].sample(N)
+            sample = df[mask].sample(min(N, mask.sum())
             ##2:
             mols = [Chem.MolFromSmiles(i) for i in sample['smiles']]
             
